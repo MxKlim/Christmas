@@ -1,0 +1,278 @@
+.tree-settings {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+    }
+    &-title::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: -10px;
+        background-color: #ffffff;
+    }
+}
+
+.tree-settings__controls {
+    display: flex;
+    gap: 25px;
+    .btn-controls {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color:inherit;
+        border: none;
+        cursor: pointer;
+        &:nth-child(1) {
+            background-image: url(../../../assets/svg/audio.svg);
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            transition: all 0.4s ease-in;
+        }
+        &:nth-child(2) {
+            background-image: url(../../../assets/svg/snowflake.svg);
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            transition: all 0.4s ease-in;
+        }
+        &:hover {
+            filter:invert(30%);
+        }
+    } 
+}
+
+.tree-choice {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(115px, 1fr) );
+    gap: 15px;
+    margin: 15px 0;
+    &__item {
+        display: block;
+        width: 115px;
+        height: 115px;
+        border-radius: 10px;
+        background-color: rgba(255,255,255, 0.7);
+        cursor:pointer;
+        transition: all 0.3s ease-in;
+        &:hover {
+            background-color: rgba(255,255,255, 0.5);
+            border:1px solid #ffffff;
+        }
+        &:nth-child(1) {
+            background-image: url(../../../assets/tree/1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &:nth-child(2) {
+            background-image: url(../../../assets/tree/2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &:nth-child(3) {
+            background-image: url(../../../assets/tree/3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &:nth-child(4) {
+            background-image: url(../../../assets/tree/4.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &:nth-child(5) {
+            background-image: url(../../../assets/tree/5.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &:nth-child(6) {
+            background-image: url(../../../assets/tree/6.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+    }
+}
+.bg-choice {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(70px, 1fr) );
+    gap: 15px;
+    margin: 15px 0;
+    &__item {
+       display: block;
+       width: 70px;
+       height: 70px; 
+       border-radius: 7px;
+       background-color: rgba(255,255,255, 0.7);
+       cursor: pointer;
+       transition: all 0.3s ease-in;
+
+       &:hover {
+        background-color: rgba(255,255,255, 0.5);
+        border:1px solid #ffffff;
+        transform: scale(1.2);
+      }
+
+      &:nth-child(1) {
+        background-image: url(../../../assets/bg/1.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(2) {
+        background-image: url(../../../assets/bg/2.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(3) {
+        background-image: url(../../../assets/bg/3.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(4) {
+        background-image: url(../../../assets/bg/4.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(5) {
+        background-image: url(../../../assets/bg/5.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(6) {
+        background-image: url(../../../assets/bg/6.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(7) {
+        background-image: url(../../../assets/bg/7.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(8) {
+        background-image: url(../../../assets/bg/8.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(9) {
+        background-image: url(../../../assets/bg/9.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+      &:nth-child(10) {
+        background-image: url(../../../assets/bg/10.jpg);
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+      }
+    }
+}
+
+.garland-type {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px auto;
+    padding: 0 10px;
+    &__item {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-shadow: 2px 1px 5px khaki;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:hover {
+            box-shadow: 2px 1px 5px #ffffff;
+            transform: scale(1.4);
+        }
+        &:nth-child(1) {
+            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+        }
+        &:nth-child(2) {
+            background-color: #ff2400;
+            box-shadow: rgba(0, 0, 0,  0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgb(255 0 0 / 50%) 0 2px 12px;
+        }
+        &:nth-child(3) {
+            background-color: #24E0FF;
+            box-shadow: rgba(0, 0, 0,  0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3f8cff 0 2px 14px;
+        }
+        &:nth-child(4) {
+            background-color: #ff0;
+            box-shadow: rgba(0, 0, 0,  0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #ff0 0 2px 12px;
+        }
+        &:nth-child(5) {
+            background-color: #ABFF00;
+            box-shadow:rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+        }
+        &.active {
+            box-shadow: 5px 1px 5px #ffffff;
+        }
+        .green-btn {
+            background-color: #ABFF00;
+            box-shadow: rgba(0, 0, 0, 1) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+        }
+    }
+    &__control {
+        display: block;
+        width: 70px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 7px;
+        text-align: center;
+        cursor: pointer;
+        background-color:rgba(0, 0, 0, 0.7);
+        background-color: rgba(31, 112, 127, .3);
+        backdrop-filter: blur(6px);
+        transition: all 0.3s ease-in;
+        &:hover {
+            background-color: rgba(31, 112, 127, .3);
+            backdrop-filter: blur(12px);
+            border: 1px solid #ffffff;
+            transform: scale(0.97);
+        }
+    }
+    
+}
+.tree-save {
+    display: block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 7px;
+    text-align: center;
+    border: none;
+    color:#ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    background-color:rgba(0, 0, 0, 0.7);
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    transition: all 0.2s ease-in;
+    &:hover {
+        background-color: rgba(31, 112, 127, .3);
+        backdrop-filter: blur(12px);
+        border: 1px solid #ffffff;
+        transform: scale(0.97);
+    }
+    &:active {
+      color:#ff2400;
+    }
+}
+.tree-active {
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+}

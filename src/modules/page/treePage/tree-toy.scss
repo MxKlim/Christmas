@@ -1,0 +1,104 @@
+.tree-toy {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.tree-toy__list {
+    display: grid;
+    column-gap: 4px;
+    row-gap: 4px;
+    margin: 30px 0;
+    grid-template-columns: repeat( auto-fill, minmax(85px, 1fr));
+}
+.tree-toy__item {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 85px;
+    height: 85px;
+    background-color: rgba(255,255,255, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    cursor:pointer;
+    &:hover {
+        background-color: rgba(255,255,255, 0.5);
+        border: 1px solid #ffffff;
+    }
+    
+
+}
+.toy-select-tree {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    &:active {
+        cursor:grabbing;
+    }
+}
+.tree-toy__count {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #24E0FF;
+    font-size: 14px;
+    line-height: 30px;
+}
+.tree-result-list {
+    width: 100%;
+    height: 180px;
+    margin-top: 30px;
+    padding: 3%;
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+}
+.tree-result__item {
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    flex: 0 0 auto;
+    border-radius: 10px;
+    cursor: pointer;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.tree-result-list::-webkit-scrollbar {
+    width: 90%;
+    height: 10px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.tree-result-list::-webkit-scrollbar-thumb {
+   width: 5px;
+   height: 5px;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+.tree-result-list::-webkit-scrollbar-button {
+  display: none;
+}
+
+.show-opacity {
+    opacity: 0.8;
+}
+.info {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0.5;
+}

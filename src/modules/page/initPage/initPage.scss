@@ -1,0 +1,72 @@
+.ball-big, .ball-smail{
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; 
+}
+.ball-big{
+    width: 500px;
+    height: 500px;
+    left: calc(50% - 550px);
+    top: 150px;
+    background-image: url(../../../assets/ball/1.png);
+}
+.ball-smail{
+    width: 300px;
+    height: 300px;
+    left: calc(50% + 150px);
+    top: 150px;
+    background-image: url(../../../assets/ball/2.png);
+}
+.ball-big::before, .ball-smail::before{
+    content: '';
+    position: absolute;
+    background-color: #aaa;
+    width: 4px;
+    height: 220px;
+    top: -43%;
+    left:40%;
+} 
+.ball-smail::before{
+    top: -72%;
+}
+.title-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.page-title{
+    
+    padding: 12%;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    border: 3px solid #278D9F;
+    border-radius: 25px;
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    font-size: 48px; 
+}
+.start-game{
+    display: block;
+    width: 320px;
+    height: 60px;
+    background-color: rgba(31, 112, 127, .3);
+    backdrop-filter: blur(6px);
+    border-radius:30px;
+    color: #ffffff;
+    border:none;
+    cursor:pointer;
+    font-weight: 300;
+    font-size: 22px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.start-game:hover{
+    transform: scale(0.95);
+}

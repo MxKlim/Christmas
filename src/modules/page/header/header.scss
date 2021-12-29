@@ -1,0 +1,68 @@
+.header__logo{
+    width: 48px;
+    height: 60px;
+    background-image: url(../../../assets/svg/tree.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;  
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;  
+}
+.header-navigation{
+    display: flex;
+    gap: 20px;
+}
+.header__button-container{
+    display: flex;
+    gap: 20px;
+}
+.select-count-toy{
+    align-items:flex-end;
+    width: 48px;
+    height: 60px;
+    background-image: url(../../../assets/svg/ball-2.svg);
+    background-size: 48px 60px;
+    background-position: left -8px;
+    background-repeat: no-repeat;
+    transition: .3s;
+    pointer-events: none;
+
+}
+.select-count-toy span{
+    display: inline-block;
+    min-width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: #278D9F;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    pointer-events: none;
+}
+.toys-select, .tree-select{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+} 
+.toys-select:hover, .tree-select:hover{
+    color: #278D9F;
+}
+.header__logo:hover{
+    filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(
+        141deg) brightness(89%) contrast(90%);
+}
+.header_active{
+    filter: invert(57%) sepia(100%) saturate(329%) hue-rotate(
+        141deg) brightness(89%) contrast(90%);
+}

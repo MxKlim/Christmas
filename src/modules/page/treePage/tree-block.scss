@@ -1,0 +1,323 @@
+.tree-block {
+    margin: 0 20px;
+    overflow: hidden;
+}
+.tree-block__bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(../../../assets/bg/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.tree-img{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.light {
+    width: 40px;
+    height: 25px;
+    padding: 0;
+    position: absolute;
+    z-index: 10001;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%) scale(2);
+    pointer-events: none;
+}
+
+.lightrope {
+    width: 40px;
+    height: 25px;
+    z-index: 2222;
+}
+.lightrope-two,
+.lightrope-tree {
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    left: -10px;
+    z-index: 2;
+}
+.lightrope-tree, 
+.lightrope-four, 
+.lightrope-five, 
+.lightrope-sex {
+    width: 80px;
+    left: -20px;
+    top: 300%;
+    z-index: 2;
+    & .lightrope__item:nth-child(1) {
+        top: 40%;
+        left: 1%;
+        animation-delay: 0.3s;
+    }
+    & .lightrope__item:nth-child(2) {
+        top: 55.82%;
+        left: 10.5%;
+        animation-delay: 0.6s;
+    }
+        
+    & .lightrope__item:nth-child(3) {
+        top: 68%;
+        left: 20%;
+        animation-delay: 0.9s;
+    }
+        
+    & .lightrope__item:nth-child(4) {
+        top: 78%;
+        left: 30%;
+        animation-delay: 1.2s;
+        }
+        
+    & .lightrope__item:nth-child(5) {
+        top: 85%;
+        left: 40%;
+        animation-delay: 1.5s;
+    }
+    & .lightrope__item:nth-child(6) {
+        top:85%;
+        left: 50%;
+        animation-delay: 1.8s;
+    }
+    & .lightrope__item:nth-child(7) {
+        top: 82%;
+        left: 60%;
+        animation-delay: 2.1s;
+    }
+    & .lightrope__item:nth-child(8) {
+        top: 72%;
+        left: 70%;
+        animation-delay: 2.4s;
+    }
+    & .lightrope__item:nth-child(9) {
+        top: 60%;
+        left: 80%;
+        animation-delay: 2.7s;
+    }
+    & .lightrope__item:nth-child(10) {
+        top: 48%;
+        left: 90%;
+        animation-delay: 3s;
+    }
+    & .lightrope__item:nth-child(11) {
+        top: 35%;
+        left: 99%;
+        animation-delay: 3.1s;
+    }
+        
+}
+.lightrope-four {
+    width: 90px;
+    position: absolute;
+    left: -30px;
+    top: 550%;
+}
+.lightrope-five {
+    width: 110px;
+    position: absolute;
+    left: -40px;
+    top: 750%;
+}
+.lightrope-sex {
+    width: 150px;
+    position: absolute;
+    left: -50px;
+    top: 950%;
+}
+
+.lightrope__item {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+        top: 40%;
+        left: 1%;
+        animation-delay: 0.3s;
+    }
+        
+    &:nth-child(2) {
+        top: 68%;
+        left: 11%;
+        animation-delay: 0.6s;
+    }
+        
+    &:nth-child(3) {
+        top: 87%;
+        left: 25%;
+        animation-delay: 0.9s;
+    }
+        
+    &:nth-child(4) {
+        top: 95%;
+        left: 46%;
+        animation-delay: 1.2s;
+    }
+        
+    &:nth-child(5) {
+        top: 86%;
+        right: 25%;
+        animation-delay: 1.5s;
+    }
+    &:nth-child(6) {
+        top: 64%;
+        left: 86%;
+        animation-delay: 1.8s;
+    }
+    &:nth-child(7) {
+        top: 33%;
+        left: 95%;
+        animation-delay: 2.1s;
+    }
+}
+
+.lightrope__item {
+animation-duration: 4.1s;
+animation-iteration-count: infinite;
+}
+
+.flash-red {
+    background: #ff2400;
+    box-shadow: 0px 4px 12px 3px #ff2400;
+    animation-name: flash-only;
+    animation-duration: 4.1s;
+    animation-iteration-count: infinite;
+}
+.flash-green {
+    background: #89FF00;
+    box-shadow: 0px 4px 12px 3px #ABFF00;
+    animation-name: flash-only;
+    animation-duration: 4.1s;
+    animation-iteration-count: infinite;
+}
+.flash-cyano {
+    background: #24E0FF;
+    box-shadow: 0px 4px 12px 3px #24E0FF;
+    animation-name: flash-only;
+    animation-duration: 4.1s;
+    animation-iteration-count: infinite;
+}
+.flash-yellow {
+    background: #ffd700;
+    box-shadow: 0px 4px 12px 3px #ffd700;
+    animation-name: flash-only;
+    animation-duration: 4.1s;
+    animation-iteration-count: infinite;
+}
+.flash-multicolor {
+    background: #ffd700;
+    box-shadow: 0px 4px 12px 3px #ffd700;
+    animation-name: flash-multicolor;
+    animation-duration: 4.1s;
+    animation-iteration-count: infinite;
+}
+.snow-move {
+    animation-name: snow-move;
+    animation-duration: 15s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+.snow-move-less {
+    animation-name: snow-move;
+    animation-duration: 20s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+/*Animation */
+@keyframes flash-1 {
+    0%,
+    100% {
+        background: #ffd700;
+        box-shadow: 0px 4px 12px 3px #ffd700;
+    }
+    50% {
+        background: #cc6600;
+        box-shadow: 0px 4px 12px 3px #cc6600;
+    }
+}
+@keyframes flash-only {
+    
+    0%, 20%, 40%, 60%, 80%, 100%{
+        opacity: 1;
+    }
+    10%, 30%, 50%, 70%, 90%{
+        opacity: 0;
+    }
+}
+@keyframes flash-multicolor {
+    0%, 
+    100%{
+        background: #ff2400;
+        box-shadow: 0px 4px 12px 3px #ff2400;
+    }
+    10%,
+    90%{
+        background: #ffd700;
+        box-shadow: 0px 4px 12px 3px #ffd700;
+
+    }
+    20%,
+    80%{
+        background: #24E0FF;
+        box-shadow: 0px 4px 12px 3px #24E0FF;
+    }
+    30%,
+    70%{
+        background: #ABFF00;
+        box-shadow: 0px 4px 12px 3px #89FF00;
+    }
+    40%,
+    60%{
+        background: #0713f1;
+        box-shadow: 0px 4px 12px 3px #0713f1;
+    }
+    
+    50% {
+        background: #cc6600;
+        box-shadow: 0px 4px 12px 3px #cc6600;
+    }
+}
+
+@keyframes snow-move {
+    0%{
+        top:0%;
+        transform: rotate(0deg);
+    } 
+    100%{
+        top:100%;
+        transform: rotate(90deg);
+
+    }
+}
+
+.map-area {
+    z-index: 4;
+    cursor: pointer;
+    background-color:#ff2400;
+    border: 1px solid #ffffff;
+}
+.snowflake {
+    position: absolute;
+    z-index: 1000010;
+    & img{
+        width: 100%;
+        height: 100%;   
+    }
+}
+.garland-type__btn {
+    width: 100px;
+}
+
+.bg-active {
+    transform: scale(1.1);
+}

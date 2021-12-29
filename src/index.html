@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <title>Christmas-task</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-navigation">
+                        <div class="header__logo"></div>
+                        <div class="header__button-container">
+                            <button class="toys-select">Игрушки </button>
+                            <button class="tree-select">Елка </button>
+                        </div>
+                    </div>
+                    <div class="select-count-toy">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div> 
+        </header>
+        <main class="main">
+            <div class="container">
+                <div class="wrapper active">
+                    <div class="ball-big"></div>
+                    <div class="ball-smail"></div>
+                    <div class="title-block">
+                        <h1 class="page-title">Новогодняя игра «Наряди ёлку»</h1>
+                        <button class="start-game">Начать</button>
+                    </div>
+                </div>
+                <div class="wrapper-left">
+                    <div class="block-toy">
+                        <div class="toy-sort">
+                            
+                            <div class="filter-by-value">
+                                <h3 class ="toy-sort__name">Фильтры по значению</h3>
+                                <div class="shape">Форма: 
+                                    <button class="shape-btn" data-type="shape" data-filter="шар"></button>
+                                    <button class="shape-btn" data-type="shape" data-filter="колокольчик"></button>
+                                    <button class="shape-btn" data-type="shape" data-filter="шишка"></button>
+                                    <button class="shape-btn" data-type="shape" data-filter="снежинка"></button>
+                                    <button class="shape-btn" data-type="shape" data-filter="фигурка"></button>
+                                </div>
+                                <div class="colors">Цвет:
+                                    <button class="colors__item" data-type="color" data-filter="белый"></button>
+                                    <button class="colors__item" data-type="color" data-filter="желтый"></button>
+                                    <button class="colors__item" data-type="color" data-filter="красный"></button>
+                                    <button class="colors__item" data-type="color" data-filter="синий"></button>
+                                    <button class="colors__item" data-type="color" data-filter="зелёный"></button>
+                                </div>
+                                <div class="size">Размер:
+                                    <button class="size-btn"  data-type="size"  data-filter="большой"></button>
+                                    <button class="size-btn"  data-type="size" data-filter="средний"></button>
+                                    <button class="size-btn"  data-type="size" data-filter="малый"></button>
+                                </div>
+                                <div class="block-favorite">Только любимые:
+                                    <input type="checkbox" id="favorite-input" class="favorite-input-cl">
+                                    <label for="favorite-input" data-type="favorite"  class="favorite-label"></label>
+                                </div>
+
+                            </div>
+                            <div class="filter-by-renge">
+                                <h3 class ="toy-sort__name">Фильтры по диапозону</h3>
+                                <p class="filter-by-renge__type">Количество экземпляров</p>
+                                <div class="filter-by-renge__block">
+                                    <div class="range-input-slider range-slider_quentity" data-type="quentity">
+                                        <div class="range-count-min">1</div>
+                                        <section class="range-slider ">
+                                            <input value="1" min="1" max="12" step="1" type="range">
+                                            <input value="12" min="1" max="12" step="1" type="range">
+                                        </section>
+                                        <div class="range-count-max">12</div> 
+                                    </div>
+                                </div>
+                                <p class="filter-by-renge__type">Год приобретения</p>
+                                <div class="filter-by-renge__block">
+                                    <div class="range-input-slider range-slider_years"  data-type="years">
+                                        <div class="range-count-min">1950</div>
+                                        <section class="range-slider">
+                                            <input value="1950" min="1950" max="2020" step="10" type="range">
+                                            <input value="2020" min="1950" max="2020" step="10" type="range">
+                                        </section>
+                                        <div class="range-count-max">2020</div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="filter-by-searth">
+                                <h3 class ="toy-sort__name">Поиск и сортировка</h3>
+
+                                <div class="searth-by-name">
+                                    <input type="search" placeholder="Поиск" class="search searth-bg" autocomplete="off">
+                                </div>
+                                <select class="sort-select" >
+                                    <option selected="" value="">Сортировка</option>
+                                    <option value="sort-name-max">По названию от «А» до «Я»</option>
+                                    <option value="sort-name-min">По названию от «Я» до «А»</option>
+                                    <option value="sort-count-max">По году по возрастанию</option>
+                                    <option value="sort-count-min">По году по убыванию</option>
+                                </select>
+                               <div class="reset-sort">
+                                   <button class="reset-sort-btn">Сброс фильтров</button>
+                                   <button class="reset-choice-btn">Сброс игрушек</button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="toy-result"></div>
+                    </div>
+                </div>
+                <div class="wrapper-bottom">
+                   <div class="overlay">
+                       <span>X</span> 
+                        <div class="container-custom-slider">
+                            <button class="button-custom-slider prev"> &#10052;</button>
+                            <div class="wrapper-custom-slider"></div>  
+                            <button class="button-custom-slider next">&#10052;</button>
+                        </div>
+                   </div>
+                   <div class="tree-settings">
+                       <div class="tree-settings__controls js_controls">
+                           <button class="btn-controls js_controls__sound"></button>
+                           <button class="btn-controls js_controls__snowfall"></button>
+                       </div>
+                       <h3 class="tree-settings-title"> Выберите ёлку</h3>
+                       <ul class="tree-choice js_tree__choice">
+                            <li class="tree-choice__item" data-tree="0"></li>
+                            <li class="tree-choice__item" data-tree="1"></li>
+                            <li class="tree-choice__item" data-tree="2"></li>
+                            <li class="tree-choice__item" data-tree="3"></li>
+                            <li class="tree-choice__item" data-tree="4"></li>
+                            <li class="tree-choice__item" data-tree="5"></li>
+                       </ul>
+                       <h3 class="tree-settings-title"> Выберите фон</h3>
+                       <ul class="bg-choice js_bg__choice">
+                           <li class="bg-choice__item" data-bg="0"></li>
+                           <li class="bg-choice__item" data-bg="1"></li>
+                           <li class="bg-choice__item" data-bg="2"></li>
+                           <li class="bg-choice__item" data-bg="3"></li>
+                           <li class="bg-choice__item" data-bg="4"></li>
+                           <li class="bg-choice__item" data-bg="5"></li>
+                           <li class="bg-choice__item" data-bg="6"></li>
+                           <li class="bg-choice__item" data-bg="7"></li>
+                           <li class="bg-choice__item" data-bg="8"></li>
+                           <li class="bg-choice__item" data-bg="9"></li>
+                       </ul>
+                       <h3 class="tree-settings-title"> Гирлянда</h3>
+                        <ul class="garland-type js_garland__list">
+                            <li class="garland-type__item" data-gd="0"></li>
+                            <li class="garland-type__item" data-gd="1"></li>
+                            <li class="garland-type__item" data-gd="2"></li>
+                            <li class="garland-type__item" data-gd="3"></li>
+                            <li class="garland-type__item" data-gd="4"></li>
+                            <li class="garland-type__btn"><button class="tree-save js_tree__garland">Вкл</button></li>
+                        </ul>
+                        <button class="tree-save js_tree__save"> Сохранить результат</button>
+                   </div>
+                   <div class="tree-block">
+                        <div class="tree-block__bg js_tree_block">
+                            <div class="tree-block__container">
+                                <img usemap="#tree-map" src="./assets/tree/1.png" class="tree-img" alt="tree">
+                                <map name="tree-map" class="map">
+                                    <!-- <area class="map-area" coords="365,699,189,706,113,683,31,608,2,555,2,539,18,437,73,351,106,224,161,134,243,-1,306,75,353,144,399,221,424,359,452,459,496,550,444,664" shape="poly"> -->
+                                    <area class="map-area" coords="82,651,63,637,56,622,32,615,25,596,28,580,10,577,1,547,7,534,26,535,57,536,75,528,81,511,77,496,43,497,38,474,18,447,27,428,71,426,91,424,102,417,108,397,93,380,63,360,88,340,115,345,147,347,110,315,128,297,159,294,125,275,119,259,131,247,150,251,172,252,114,237,103,229,108,207,130,207,159,216,177,211,170,195,160,188,171,177,176,162,158,146,152,132,166,119,181,119,195,134,206,123,193,102,189,74,200,57,215,35,231,13,245,3,263,6,270,20,276,39,292,56,309,71,301,96,307,108,311,122,316,138,318,152,333,141,351,134,362,154,351,188,356,206,370,218,404,226,365,265,406,280,397,302,360,313,375,324,389,339,411,345,429,348,433,366,374,391,369,411,415,405,422,420,416,431,443,434,459,448,460,465,429,487,430,500,441,512,446,526,485,529,494,535,493,554,490,569,474,578,470,602,460,630,454,655,438,673,390,674,370,695,324,700,278,702,224,701,164,697,98,671" shape="poly">
+                                </map>
+                            </div>
+                            <div class="light">
+                                <ul class=" lightrope js_lightrope">
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                </ul>
+                                <ul class=" lightrope  lightrope-two">
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                </ul>
+                                <ul class=" lightrope  lightrope-tree">
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                </ul>
+                                <ul class=" lightrope  lightrope-four">
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                </ul>
+                                <ul class=" lightrope  lightrope-five">
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                </ul>
+                                <ul class=" lightrope  lightrope-sex">
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                    <li class="lightrope__item"></li>
+                                </ul>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="tree-toy">
+                        <h3 class="tree-settings-title"> Игрушки</h3>
+                        <ul class="tree-toy__list js_toy__list">
+                        </ul>
+                        <h3 class="tree-settings-title"> Вы нарядили</h3>
+                        <ul class="tree-result-list js_tree_result_list">
+                           <li class="info">Здесь будут ваши елки</li>
+                            
+                    
+                        </ul>
+                   </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+               <div class="footer-wrapper">
+                   <div class="copy-block">
+                    <p class="copy">© 2021</p>
+                    <a href="https://github.com/MxKlim" class="link-github">MxKlim</a>
+                   </div>
+                   <a class="rss-logo" href="https://rs.school/js/" target="_blank"></a>
+               </div> 
+            </div>
+        </footer>
+    </div>
+    
+    <template id="template-card">
+        <div class="toy-card">
+            <h4 class="toy-card__name"></h4>
+            <div class="toy-card__wrapper">
+                <div class="toy-card-visual">
+                    <div class="toy-img_block">
+                        <img class="toy-img" src="" alt="toy">
+                    </div>
+                    <div class="toy-indicator">
+
+                    </div>
+                </div>
+                <ul class="toy-card__list">
+                    <li class="toy-card__item quentity"></li>
+                    <li class="toy-card__item year"></li>
+                    <li class="toy-card__item shape-toy"></li>
+                    <li class="toy-card__item color-toy"></li>
+                    <li class="toy-card__item size-toy"></li>
+                    <li class="toy-card__item favorite-toy"></li>
+                </ul>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
